@@ -35,4 +35,4 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           source: "./build"
           dest: "s3://${{ secrets.S3_BUCKET }}"
-          flags: --recursive
+          flags: --recursive --exclude "applications/*"
