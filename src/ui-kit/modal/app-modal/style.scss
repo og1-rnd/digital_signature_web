@@ -1,0 +1,16 @@
+.app-modal{
+  &-close-x{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    & svg{
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &-title{
+    text-align: center;
+    margin-top: 26px !important;
+  }
+}

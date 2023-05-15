@@ -3,16 +3,15 @@ import './SigningOutputSection.scss';
 import { cn } from '@bem-react/classname';
 import AppButton from '@ui-kit/buttons';
 import AppText from '@ui-kit/typography';
-import { ISigningOutputSectionProps } from './SigningOutputSection.types';
 import { ReactComponent as SmallArrow } from '@assets/img/small-arrow-down.svg';
 import { ReactComponent as CopyIcon } from '@assets/img/copy.svg';
+import { ISigningOutputSectionProps } from './SigningOutputSection.types';
 
 const CnOutputSection = cn('signing-output-section');
 
 /**
  * @description компонент для отображения результатов подписи
- * @param {ISigningOutputSectionProps} props
- * @constructor
+ * @param props
  */
 const SigningOutputSection: React.FC<ISigningOutputSectionProps> = (
   props: ISigningOutputSectionProps,

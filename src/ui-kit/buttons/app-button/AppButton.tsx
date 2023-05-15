@@ -2,9 +2,9 @@ import React from 'react';
 import { cn } from '@bem-react/classname';
 import { Button, ConfigProvider } from 'antd';
 
-import { TAppButtonProps } from './AppButton.types';
 import { ReactComponent as LoaderIcon } from '@assets/img/loader.svg';
 import AppText from '@ui-kit/typography';
+import { TAppButtonProps } from './AppButton.types';
 
 import { getAppButtonTheme, getButtonLoaderColor } from './AppButton.utils';
 
@@ -12,6 +12,10 @@ import './AppButton.scss';
 
 const CnAppButton = cn('app-button');
 
+/**
+ * @description button component
+ * @param props
+ */
 const AppButton: React.FC<TAppButtonProps> = (props: TAppButtonProps) => {
   const {
     type = 'primary',
@@ -23,6 +27,7 @@ const AppButton: React.FC<TAppButtonProps> = (props: TAppButtonProps) => {
     leftElem,
     rightElem,
     onButtonClick,
+    className = '',
   } = props;
 
   const theme = getAppButtonTheme(type, mainColor, disabled);
@@ -31,7 +36,7 @@ const AppButton: React.FC<TAppButtonProps> = (props: TAppButtonProps) => {
     <ConfigProvider theme={theme}>
       <Button
         prefixCls={CnAppButton()}
-        className={CnAppButton({ isNoText: !text })}
+        className={`${className} ${CnAppButton({ isNoText: !text })}`}
         type={type}
         size={size || 'middle'}
         disabled={disabled || isLoading}

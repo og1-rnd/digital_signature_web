@@ -1,3 +1,5 @@
 import { PopoverProps } from 'antd/lib/popover';
 
-export type IAppPopover = PopoverProps;
+export interface IAppPopoverProps extends PopoverProps {
+  isVisible?: boolean;
+}

@@ -1,4 +1,4 @@
-import { IAppInputType } from '@ui-kit/inputs/app-input/AppInput.types';
+import { TAppInputType } from '@ui-kit/inputs/app-input/AppInput.types';
 
 export interface IInputContentProps {
   title: string;
@@ -7,7 +7,7 @@ export interface IInputContentProps {
   isShowIcon?: boolean;
   value: string;
   setValue: (text: string) => void;
-  rules: Array<string>;
+  rules?: Array<string>;
   rows?: number;
-  inputType?: IAppInputType;
+  inputType?: TAppInputType;
 }

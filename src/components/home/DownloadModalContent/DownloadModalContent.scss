@@ -1,0 +1,28 @@
+.download-modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  &-mobile-store{
+    &-container{
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-top: 40px;
+    }
+
+    &-image{
+      cursor: pointer;
+      height: 40px;
+    }
+  }
+
+  &-buttons-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 12px;
+  }
+}

@@ -3,7 +3,7 @@ import { cn } from '@bem-react/classname';
 import { ConfigProvider, Input } from 'antd';
 
 import { TextAreaProps, PasswordProps, InputProps } from 'antd/lib/input';
-import { IAppInput } from './AppInput.types';
+import { TAppInput } from './AppInput.types';
 
 import './style.scss';
 
@@ -17,9 +17,16 @@ const inputTheme = {
   },
 };
 
-const AppInput: React.FC<IAppInput> = (props: IAppInput) => {
+/**
+ * @description input component
+ * @param props
+ */
+const AppInput: React.FC<TAppInput> = (props: TAppInput) => {
   const { type, isSmall } = props;
 
+  /**
+   * @description получаем инпут в зависимости от типа
+   */
   const getInput = () => {
     switch (type) {
       case 'textArea':

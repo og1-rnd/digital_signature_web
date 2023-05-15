@@ -1,7 +1,12 @@
 import { ThemeConfig } from 'antd/lib/config-provider/context';
 
-import { appButtonColorType, appButtonType } from './AppButton.types';
-const getButtonColor = (color: appButtonColorType): string => {
+import { TAppButtonColor, TAppButton } from './AppButton.types';
+
+/**
+ * @description получаем цвет кнопки
+ * @param color
+ */
+const getButtonColor = (color: TAppButtonColor): string => {
   switch (color) {
     case 'red':
       return '#EA5959';
@@ -12,12 +17,19 @@ const getButtonColor = (color: appButtonColorType): string => {
   }
 };
 
-export const getButtonLoaderColor = (color: appButtonColorType, type: appButtonType): string => {
+export const getButtonLoaderColor = (color: TAppButtonColor, type: TAppButton): string => {
   return type === 'primary' ? 'white' : color;
 };
+
+/**
+ * @description получаем стили кнопки в зависимости от типа
+ * @param type
+ * @param mainColor
+ * @param disabled
+ */
 export const getAppButtonTheme = (
-  type: appButtonType,
-  mainColor: appButtonColorType,
+  type: TAppButton,
+  mainColor: TAppButtonColor,
   disabled?: boolean,
 ): ThemeConfig => {
   const color = getButtonColor(disabled ? 'grey' : mainColor);
@@ -27,10 +39,10 @@ export const getAppButtonTheme = (
   const colorBgContainerDisabled = type === 'primary' ? color : 'transparent';
   return {
     token: {
-      colorPrimary: colorPrimary,
-      colorBorder: colorBorder,
-      colorBgContainerDisabled: colorBgContainerDisabled,
-      colorText: colorText,
+      colorPrimary,
+      colorBorder,
+      colorBgContainerDisabled,
+      colorText,
     },
   };
 };

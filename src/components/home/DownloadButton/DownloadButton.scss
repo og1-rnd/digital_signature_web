@@ -1,0 +1,96 @@
+.download-button{
+
+  &-container{
+    position: relative;
+
+    &:hover {
+      background-color: var(--color-hober-blue);
+    }
+
+    &_isMultiDownLoad {
+      &:hover {
+        .download-button {
+          &-icon {
+            transform: rotate(180deg);
+          }
+
+          &-dropdown {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--color-main-blue);
+  cursor: pointer;
+
+  & .app-text{
+    color: var(--color-main-blue);
+  }
+
+  &-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+      height: 20px;
+      width: 20px;
+    }
+
+    &_isMultiDownLoad {
+      & svg {
+        path {
+          fill: var(--color-main-blue)
+        }
+      }
+    }
+  }
+
+  &-dropdown{
+    display: none;
+    position: absolute;
+    top: 42px;
+    width: calc(100% - 2px);
+    z-index: 100;
+    background-color: var(--color-essential);
+    border: 1px solid var(--color-grey-description);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: 0;
+    overflow: hidden;
+
+    &-item{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+
+      &:hover{
+        background-color: var(--color-hober-blue)
+      }
+
+      & .app-text{
+        padding-left: 12px;
+        color: var(--color-main-blue);
+      }
+
+      &-icon{
+        padding-right: 12px;
+        & svg {
+          height: 14px;
+          width: 14px;
+        }
+      }
+    }
+  }
+}

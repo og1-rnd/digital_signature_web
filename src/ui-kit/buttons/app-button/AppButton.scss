@@ -30,7 +30,7 @@
 
     .blue{
         path {
-            stroke: var(--color-link);
+            stroke: var(--color-main-blue);
         }
     }
     .red{
@@ -40,7 +40,7 @@
     }
     .grey{
         path {
-            stroke: var(--color-gray-inactive);
+            stroke: var(--color-grey-inactive);
         }
     }
     .white{
@@ -100,7 +100,7 @@
 
         &_isDisabled{
             path {
-                stroke: var(--color-gray-inactive);
+                stroke: var(--color-grey-inactive);
             }
         }
     }

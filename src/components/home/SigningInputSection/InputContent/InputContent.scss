@@ -18,6 +18,10 @@
 
     & .app-input{
       width: 100%;
+
+      textarea {
+        resize: none;
+      }
     }
 
     &-icon{
@@ -28,9 +32,9 @@
 
   &-popover{
     display: flex;
-    flex-direction: column;
-    max-width: 326px;
-    padding: 0 10px;
+    flex-direction: row;
+    max-width: 350px;
+    padding: 15px 5px;
     gap: 8px;
 
     &_isMobile{
@@ -52,7 +56,7 @@
       height: 8px;
       width: 8px;
       border-radius: 4px;
-      background-color: var(--color-gray-inactive);
+      background-color: var(--color-grey-inactive);
     }
   }
 }

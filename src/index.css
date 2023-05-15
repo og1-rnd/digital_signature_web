@@ -58,13 +58,15 @@ code {
 
 :root {
   --blue-border: #D3E0EF;
-  --color-link: #0088e9;
+  --color-main-blue: #0088e9;
+  --color-hober-blue: #eef4fc;
   --color-essential: #fff;
   --color-dashboard: #f9fafd;
   --color-stroke-maingray: #eef4fb;
   --color-main-black: #252232;
   --color-red-main: #ea5959;
-  --color-gray-inactive: #c0c2c9;
+  --color-grey-inactive: #c0c2c9;
+  --color-grey-description: #919399;
   --color-main-dark-icons: #585c6f;
 }
 

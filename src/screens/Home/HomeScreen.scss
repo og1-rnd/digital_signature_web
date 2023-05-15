@@ -1,30 +1,47 @@
 .home-screen {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 50px 0;
 
   &-logo{
-    padding: 30px 50px;
+    padding-bottom: 50px;
+  }
+
+  &-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 440px;
+    gap: 24px;
+
+    &_isMobile{
+      width: 330px;
+    }
   }
 
   &-card {
     display: flex;
     flex-direction: column;
-    width: 374px;
     padding: 32px;
-    border-radius: 14px;
-    border: 1px solid var(--blue-border);
-    background-color: var(--color-essential);
     gap: 24px;
 
     &_isMobile{
-      width: 288px;
       padding: 32px 20px;
       gap: 32px;
     }
+  }
+
+  &-download-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .open-modal-button{
+    width: 200px;
   }
 }
 
